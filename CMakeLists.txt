@@ -1,0 +1,22 @@
+cmake_minimum_required(VERSION 3.10)
+
+set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD_REQUIRED True)
+
+set(CONCEPT_EXPLORE_HEADERS)
+set(CONCEPT_EXPLORE_SOURCES)
+
+list(APPEND CONCEPT_EXPLORE_HEADERS
+    "${CMAKE_CURRENT_LIST_DIR}/Machine.hxx"
+    "${CMAKE_CURRENT_LIST_DIR}/StateMachine.hxx"
+    "${CMAKE_CURRENT_LIST_DIR}/StateMachineEvents.hxx"
+    "${CMAKE_CURRENT_LIST_DIR}/Types.hxx"
+)
+
+list(APPEND CONCEPT_EXPLORE_SOURCES
+    "${CMAKE_CURRENT_LIST_DIR}/main.cpp"
+)
+
+project(ConceptsExplore)
+
+add_executable(ConceptsExplore ${CONCEPT_EXPLORE_HEADERS} ${CONCEPT_EXPLORE_SOURCES})
